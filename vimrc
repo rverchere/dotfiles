@@ -85,6 +85,8 @@ filetype plugin on
 " Auto completion - omni code
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
+let Tlist_Use_Right_Window = 1
+
 "" Mapping
 " pep8
 let g:pep8_map='<F8>'

@@ -36,8 +36,8 @@ set nowrap
 " Affiche les numeros de ligne
 set number
 
-" Special développeurs
-"
+"" Spécial développeurs
+
 " Indispensable pour ne pas tout casser avec ce qui va suivre
 set preserveindent
 " indentation automatique
@@ -56,19 +56,16 @@ set expandtab
 set smarttab
 
 
-" Affichage des caracteres invisibles
+" Affichage des caractères invisibles
 set list
 set lcs:tab:>-,trail:.
 
-" 80 char
+" 80 charractères
 set textwidth=79
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-" use the mouse
-set mouse=a
-
-" backup, and put file to $HOME/.vim/backup
+" Sauvegarde dans dossier $HOME/.vim/backup
 set backup
 if filewritable(expand("~/.vim/backup")) == 2
     set backupdir=$HOME/.vim/backup
@@ -79,21 +76,19 @@ else
     endif
 endif
 
-" Enable file type plugins
-filetype plugin on
+" Activation plugin/indent filetype
+filetype plugin indent on
 
-" Auto completion - omni code
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+""" Utilisation de vim-plug
+call plug#begin('~/.vim/plugged')
 
-let Tlist_Use_Right_Window = 1
+"" Nerd Tree
+Plug 'scrooloose/nerdtree'
+" Mapping
+map <C-n> :NERDTreeToggle<CR>
 
-"" Mapping
-" pep8
-let g:pep8_map='<F8>'
-" python console
-map <F2> :w\|!python %<CR>
-" Tag list
-map L :TlistToggle<CR>
-" NERDTree
-map E :NERDTree<CR>
+"" Git
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
 

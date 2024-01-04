@@ -1,0 +1,143 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+symbol = "󰏗 "
+disabled = true
+
+[kubernetes]
+disabled = false
+format = '\[[$symbol$context( \($namespace\))]($style)\] '
+style = 'green'
+
+# Kubernetes prod contexts
+[[kubernetes.contexts]]
+context_pattern = ".*-prod"
+style = "bold red"
+
+[[kubernetes.contexts]]
+context_pattern = ".*-dev"
+style = "bold green"
+
+[aws]
+symbol = "  "
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 50
+
+[cmd_duration]
+disabled = true
+
+[directory]
+read_only = " 󰌾"
+fish_style_pwd_dir_length = 1
+
+[direnv]
+disabled = false
+
+[docker_context]
+symbol = " "
+
+[git_branch]
+symbol = " "
+format = '\[[$symbol$branch]($style)\]'
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[golang]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[helm]
+format = '\[[$symbol($version)]($style)\]'
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os]
+format = '\[[$symbol]($style)\]'
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[time]
+disabled = true
+
+[username]
+format = '\[[$user]($style)\]'

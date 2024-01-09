@@ -12,7 +12,7 @@ end
 
 -- This is where you actually apply your config choices
 config.color_scheme = 'nord'
-config.font = wezterm.font 'FiraCode Nerd Font'
+config.font = wezterm.font 'FiraMono Nerd Font'
 
 -- Disable fancy tab style
 config.use_fancy_tab_bar = false

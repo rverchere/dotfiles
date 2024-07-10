@@ -12,7 +12,7 @@ disabled = true
 [kubernetes]
 disabled = false
 format = '\[[$symbol$context( \($namespace\))]($style)\] '
-style = 'green'
+style = 'blue'
 
 # Kubernetes prod contexts
 [[kubernetes.contexts]]
@@ -32,7 +32,7 @@ charging_symbol = '⚡️ '
 discharging_symbol = '💀 '
 
 [[battery.display]]
-threshold = 50
+threshold = 25
 
 [cmd_duration]
 disabled = true
@@ -53,6 +53,7 @@ format = '\[[$symbol$branch]($style)\]'
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
+disabled = true
 
 [golang]
 symbol = " "

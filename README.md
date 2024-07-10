@@ -2,7 +2,7 @@
 
 ## Shell
 
-- Bash RC file
+- zshrc file
 - [WezTerm](https://github.com/wez/wezterm) Terminal Emulator Configuration file
 - [Starship](https://starship.rs/) Prompt Configuration file
 

@@ -6,11 +6,9 @@
 - [WezTerm](https://github.com/wez/wezterm) Terminal Emulator Configuration file
 - [Starship](https://starship.rs/) Prompt Configuration file
 
-## VIM
+## Editor
 
-.vim config and plugin files, for my daily sysadmin/dev work.
-
-Using [vim-plug](https://github.com/junegunn/vim-plug) for plugin management.
+Using Neovim with [lazy](ttps://www.lazyvim.org/) presets.
 
 ## Contribution
 
